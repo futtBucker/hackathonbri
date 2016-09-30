@@ -75,7 +75,7 @@
                             <a href="">Retur</a>
                         </li>
                         <li>
-                            <a href="#">Invoice <span class="fa arrow"></span></a>
+                            <a href="purchase_invoice.php">Invoice <span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
                                 <li>
                                     <a href="purchase_invoice.php">Invoice dengan Auto Payment via BRI</a>
