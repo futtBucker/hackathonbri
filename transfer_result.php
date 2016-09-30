@@ -1,23 +1,3 @@
-<?php
-
-include_once './WS.php';
-
-$pengirim = '087839182323';
-$penerima = '087839183232';
-$pin = '244401';
-$nominal = $_POST['grandtotal'];
-
-$param = array('nohandphonePengirim' => $pengirim, 'nohandphonePenerima' => $penerima, 'pin' => $pin, 'nominal' => $nominal);
-
-$ws = new WS();
-$rsl = $ws->transferTBank($param);
-
-$res = [];
-foreach ($rsl as $key => $value) {
-    $res[$key] = $value;
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,6 +17,25 @@ foreach ($rsl as $key => $value) {
     </head>
 
     <body>
+        <?php
+
+            include_once './WS.php';
+
+            $pengirim = '087839182323';
+            $penerima = '087839183232';
+            $pin = '244401';
+            $nominal = $_POST['grandtotal'];
+
+            $param = array('nohandphonePengirim' => $pengirim, 'nohandphonePenerima' => $penerima, 'pin' => $pin, 'nominal' => $nominal);
+
+            $ws = new WS();
+            $rsl = $ws->transferTBank($param);
+
+            $res = [];
+            foreach ($rsl as $key => $value) {
+                $res[$key] = $value;
+            }
+        ?>
 
         <div id="wrapper">
 
