@@ -9,8 +9,8 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Invoice Auto Payment</title>
-        
+        <title>Retur Pembelian</title>
+
         <?php include_once './resource.php'; ?>
 
     </head>
@@ -21,11 +21,11 @@
 
             <!-- Navigation -->
             <?php include_once './navigation.php'; ?>
-            
+
             <div id="page-wrapper">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Invoice dengan Auto Payment</h1>
+                        <h1 class="page-header">Retur Pembelian</h1>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
@@ -34,66 +34,67 @@
                     <div class="col-lg-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
+                                General Data
                             </div>
                             <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-lg-3">
-                                        <div class="form-group">
-                                            <label for="smbr">Sumber Data :</label>
-                                            <select id="smbr" name="smbr" class="selectpicker" data-live-search="true">
-                                                <option data-tokens="Requisition">Requisition</option>
-                                                <option data-tokens="Purchase Order">Purchase Order </option>
-                                                <option data-tokens="Penerimaan Barang">Penerimaan Barang</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="form-group">
-                                            <label>Kode :</label>
-                                            <input class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <form role="form">
                                             <div class="form-group">
-                                                <label>Kode Invoice :</label>
-                                                <input class="form-control">
+
+                                                <div class="col-lg-6">
+                                                    <label>Vendor :</label>
+                                                    <input class="form-control">
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <label> &nbsp </label>
+                                                    <select id="vensel" name="vensel" class="selectpicker" data-live-search="true">
+                                                        <option data-tokens="ketchup mustard">...</option>
+                                                        <option data-tokens="mustard">....</option>
+                                                        <option data-tokens="frosting">....</option>
+                                                    </select>
+                                                </div>
                                             </div>
                                             <div class="form-group">
-                                                <label>Tanggal Invoice :</label>
-                                                <input class="form-control ">
+                                                <!--<div class="col-lg-11">-->
+                                                <div class="col-lg-6">
+                                                    <label>Receipt No:</label>
+                                                    <input class="form-control ">
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <label>Keterangan :</label>
+                                                    <input class="form-control ">
+                                                </div>
+                                                <div class="col-lg-1">
+                                                    <!--<label>SO Date:</label>-->
+                                                    <!--<input class="form-control ">-->
+                                                </div>
                                             </div>
+                                            <!--</div>-->
                                         </form>
                                     </div>
                                     <!-- /.col-lg-6 (nested) -->
                                     <div class="col-lg-6">
+                                        <form role="form">
                                             <div class="form-group">
-                                                <div class="col-lg-6">
-                                                    <label for="vensel">Vendor :</label>
-                                                    <select id="vensel" name="vensel" class="selectpicker" data-live-search="true">
-                                                        <option data-tokens="PT Dunia Bersama">PT Dunia Bersama</option>
-                                                        <option data-tokens="PT Atma Wijaya">PT Atma Wijaya </option>
-                                                        <option data-tokens="PT Maju Mundur">PT Maju Mundur</option>
-                                                    </select>
+                                                <div class="col-lg-12">
+                                                    <label for="vensel">Return :</label>
+                                                    <input class="form-control">
                                                 </div>
                                             </div><br> <br><br>
-                                    </div> <br> <br>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
+                                            </div> <br> <br>
                                             <div class="col-lg-6">
-                                                    <label for="termin">Termin :</label>
-                                                    <select id="termin" name="termin" class="selectpicker" data-live-search="true">
-                                                        <option data-tokens="Tunai (COD)">Tunai (COD)</option>
-                                                        <option data-tokens="n/10, 10">n/10, 10</option>
-                                                        <option data-tokens="n/30, 20">n/30, 20</option>
-                                                    </select>
+                                                <div class="form-group">
+                                                    <div class="col-lg-12">
+                                                        <label for="disabledSelect">Tanggal :</label>
+                                                        <input class="form-control">
+                                                    </div>
                                                 </div>
-                                        </div>
+                                        </form>
                                     </div>
                                     <!-- /.col-lg-6 (nested) -->
                                     <div class="col-lg-12">
+                                        
                                         <h1></h1>
 
                                         <div class="row">
@@ -190,63 +191,41 @@
                                             <tbody>
                                                 <tr>
                                                     <td>TX20</td>
-                                                    <td>Packet III </td>
+                                                    <td>Galaxy Note </td>
                                                     <td>1</td>
-                                                    <td>700000</td>
+                                                    <td>7.000.000</td>
                                                     <td>25 %</td>
                                                     <td>10 %</td>
-                                                    <td>694000</td>
+                                                    <td>6.940.000</td>
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <br>
-                                        <form action="transfer_result.php" method="post">
-                                            <div class="row">
+                                        <div class="row">
+                                            <div class="col-sm-6"></div><div class="col-sm-2"> <h3>Sub Total :</h3> </div>
+                                        </div>
+                                        
+                                        <div class="row">
                                             <div class="col-sm-6"></div>
                                             <div class="col-sm-2">
-                                                <label>Sub total :</label>
+                                                <label>Total Return :</label>
                                                 <!--<input class="form-control" type='text' name='salary' id='salary'>-->
                                             </div>                                        
                                             <div class="col-sm-4">
                                                 <!--<label>Total order:</label>-->
-                                                <input class="form-control" type='text' name='subtotal' id='subtotal'>
+                                                <input class="form-control" type='text' name='salary' id='salary'>
 
                                             </div>
-                                            </div><br>
-                                            <div class="row">
-                                                <div class="col-sm-6"></div>
-                                                <div class="col-sm-2">
-                                                    <label>Discount % :</label>
-                                                    <input class="form-control" type='text' name='discpercent' id='discpercent'>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <label>..............................................................................</label>
-                                                    <input class="form-control" type='text' name='discnom' id='discnom'> 
-                                                </div>
+                                        </div><br>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="text-right">
+                                                    <!--<label>Kode Barang :</label>-->
+                                                    <button type="button" class="btn btn-primary"> Simpan & Baru</button>
+                                                    <button type="button" class="btn btn-primary">Simpan & Tutup</button>
+                                                    <button type="button" class="btn btn-primary">Batal </button>
+                                                </div>  
                                             </div>
-                                            <br>
-                                            <div class="row">
-                                                <div class="col-sm-6"></div>
-                                                <div class="col-sm-2">
-                                                    <label>Total Bayar :</label>
-                                                    <!--<input class="form-control" type='text' name='salary' id='salary'>-->
-                                                </div>                                        
-                                                <div class="col-sm-4">
-                                                    <!--<label>Total order:</label>-->
-                                                    <input class="form-control" type='text' name='grandtotal' id='grandtotal'>
-
-                                                </div>
-                                            </div><br>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div class="text-right">
-                                                        <!--<label>Kode Barang :</label>-->
-                                                        <button type="submit" class="btn btn-primary">Simpan dan Bayar Otomatis</button>
-                                                        <button type="button" class="btn btn-primary">Batal </button>
-                                                    </div>  
-                                                </div>
-                                            </div>
-                                        </form>
+                                        </div>
                                     </div>
                                     <!-- /.col-lg-12 (nested) -->
                                 </div>
@@ -266,34 +245,13 @@
         <!-- /#wrapper -->
         <script type="text/javascript">
             $(document).ready(function() {
-                
-                jQuery.fn.dataTable.Api.register( 'sum()', function ( ) {
-                    return this.flatten().reduce( function ( a, b ) {
-                        if ( typeof a === 'string' ) {
-                            a = a.replace(/[^\d.-]/g, '') * 1;
-                        }
-                        if ( typeof b === 'string' ) {
-                            b = b.replace(/[^\d.-]/g, '') * 1;
-                        }
-
-                        return a + b;
-                    }, 0 );
-                } );                
-                
                 var table = $('#example').DataTable();
-                var fieldSubTotal = $('#subtotal');
-                var fieldGrandTotal = $('#grandtotal');
-                var fieldDiscNom = $('#discnom');
-                var fieldDiscPerc = $('#discpercent');
-                
-                sumSubTotal();
-                
-                fieldGrandTotal.val(fieldSubTotal.val());
 
                 $('#example tbody').on('click', 'tr', function() {
                     var data = table.row(this).data();
                     alert('You clicked on ' + data[0] + '\'s row');
-//                    data[0] = 'Loremipsum';
+                    data[0] = 'Loremipsum';
+
                 });
 
                 $('#addrow').on('submit', function() {
@@ -317,33 +275,12 @@
                         hargaSatuan,
                         Disc,
                         Pajak,
-                        '12300'
+                        '123'
                     ]).draw(false);
 
                     $('#myModal').modal('toggle');
-                    
-                    sumSubTotal();
-                    
                     return false;
                 });
-                
-                $('#discpercent').on('keyup', function () {
-                    var dscprc = fieldDiscPerc.val();
-                    var subttl = fieldSubTotal.val();
-                    var rsl = dscprc / 100 * subttl;
-                    fieldDiscNom.val(rsl);
-                    
-                    fieldGrandTotal.val(subttl - rsl);
-                    
-                });
-                
-                function sumSubTotal() {
-                    var total = table.column(6).data().sum();
-                    fieldSubTotal.val(total);
-                    console.log('total',total);
-                }
-                
-                
 
                 // $('#sbmt').click();
 

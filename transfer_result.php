@@ -63,7 +63,13 @@
                         if($res['ResponseCode'] == '00') {
                     ?>
                     <div class="alert alert-success" role="alert">
-                        <a href="#" class="alert-link">Saldo anda saat ini : <?php echo $res['Saldo']; ?></a>
+                        <a href="#" class="alert-link">
+                            Nominal Transfer sebesar : <?php echo $nominal; ?><br/>
+                            Dari akun : <?php echo $pengirim; ?><br/>
+                            Ke akun : <?php echo $penerima; ?><br/>
+                            Saldo anda saat ini : <?php echo $res['Saldo']; ?>
+                            <br/>
+                        </a>
                     </div>
                     <?php 
                         } else { ?>

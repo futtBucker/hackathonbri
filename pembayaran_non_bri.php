@@ -9,8 +9,8 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Invoice Auto Payment</title>
-        
+        <title>Pembayaran Tagihan</title>
+
         <?php include_once './resource.php'; ?>
 
     </head>
@@ -21,11 +21,11 @@
 
             <!-- Navigation -->
             <?php include_once './navigation.php'; ?>
-            
+
             <div id="page-wrapper">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Invoice dengan Auto Payment</h1>
+                        <h1 class="page-header">Pembayaran Tagihan</h1>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
@@ -36,36 +36,46 @@
                             <div class="panel-heading">
                             </div>
                             <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-lg-3">
-                                        <div class="form-group">
-                                            <label for="smbr">Sumber Data :</label>
-                                            <select id="smbr" name="smbr" class="selectpicker" data-live-search="true">
-                                                <option data-tokens="Requisition">Requisition</option>
-                                                <option data-tokens="Purchase Order">Purchase Order </option>
-                                                <option data-tokens="Penerimaan Barang">Penerimaan Barang</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="form-group">
-                                            <label>Kode :</label>
-                                            <input class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <form role="form">
                                             <div class="form-group">
-                                                <label>Kode Invoice :</label>
-                                                <input class="form-control">
+                                                <div class="col-lg-6">
+                                                    <label for="smbr">Sumber Data :</label>
+                                                    <select id="smbr" name="smbr" class="selectpicker" data-live-search="true">
+                                                    <option data-tokens="Requisition">Requisition</option>
+                                                    <option data-tokens="Purchase Order">Purchase Order </option>
+                                                    <option data-tokens="Penerimaan Barang">Penerimaan Barang</option>
+                                            </select>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label>Kode :</label>
+                                                        <input class="form-control">
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="form-group">
-                                                <label>Tanggal Invoice :</label>
-                                                <input class="form-control ">
+                                                <div class="col-lg-12">
+                                                    <label>Penerima :</label>
+                                                    <input class="form-control" type='text' name='startdate' id='startdate'>
+                                                </div>
                                             </div>
-                                        </form>
+                                            <div class="form-group">
+                                                <div class="col-lg-6">
+                                                    <label>Bank :</label> <input class="form-control">
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <label>No Rek</label>
+                                                    <input class="form-control">
+                                                </div>
+                                            </div><br>
+                                            <div class="form-group">
+                                                <div class="col-lg-12">
+                                                    <label>Memo :</label>
+                                                    <textarea class="form-control" type='text' name='startdate' id='startdate'></textarea>
+                                                </div>
+                                            </div>
                                     </div>
                                     <!-- /.col-lg-6 (nested) -->
                                     <div class="col-lg-6">
@@ -78,19 +88,22 @@
                                                         <option data-tokens="PT Maju Mundur">PT Maju Mundur</option>
                                                     </select>
                                                 </div>
-                                            </div><br> <br><br>
-                                    </div> <br> <br>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <div class="col-lg-6">
-                                                    <label for="termin">Termin :</label>
-                                                    <select id="termin" name="termin" class="selectpicker" data-live-search="true">
-                                                        <option data-tokens="Tunai (COD)">Tunai (COD)</option>
-                                                        <option data-tokens="n/10, 10">n/10, 10</option>
-                                                        <option data-tokens="n/30, 20">n/30, 20</option>
-                                                    </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-lg-12">
+                                                    <label for="nopem">No Pembayaran :</label>
+                                                    <input id="nopem" class="form-control">
                                                 </div>
-                                        </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-lg-12">
+                                                    <label>Tanggal Pembayaran :</label>
+                                                    <input class="form-control">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="col-lg-6">
+
                                     </div>
                                     <!-- /.col-lg-6 (nested) -->
                                     <div class="col-lg-12">
@@ -117,43 +130,43 @@
                                                         <h4 class="modal-title">Tambah Item</h4>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <form id="addrow" action='' method='post'>
+                                                        <form id='addrow' action='' method='post'>
                                                             <div class="row">
                                                                 <div class="col-sm-6">
-                                                                    <label>Kode Barang :</label>
-                                                                    <input class="form-control" type='text' name='kodeBarang' id='kodeBarang'>
+                                                                    <label>No Faktur :</label>
+                                                                    <input class="form-control" type='text' name='nofaktur' id='nofaktur'>
                                                                 </div>
                                                                 <div class="col-sm-6">
-                                                                    <label>Nama Barang :</label>
-                                                                    <input class="form-control" type='text' name='namaBarang' id='namaBarang'>
+                                                                    <label>Jatuh Tempo :</label>
+                                                                    <input class="form-control" type='text' name='jthtempo' id='jthtempo'>
                                                                 </div>
                                                             </div>
 
                                                             <div class="row">
                                                                 <div class="col-sm-6">
-                                                                    <label>Qty :</label>
-                                                                    <input class="form-control" type='text' name='Qty' id='Qty'>
+                                                                    <label>DP :</label>
+                                                                    <input class="form-control" type='text' name='dp' id='dp'>
                                                                 </div>
                                                                 <div class="col-sm-6">
-                                                                    <label>Harga Satuan :</label>
-                                                                    <input class="form-control" type='text' name='hargaSatuan' id='hargaSatuan'>
+                                                                    <label>Kekurangan :</label>
+                                                                    <input class="form-control" type='text' name='kekurangan' id='kekurangan'>
                                                                 </div>
                                                             </div>
 
                                                             <div class="row">
                                                                 <div class="col-sm-6">
                                                                     <label>Disc % :</label>
-                                                                    <input class="form-control" type='text' name='Disc' id='Disc'>
+                                                                    <input class="form-control" type='text' name='disc' id='disc'>
                                                                 </div>
                                                                 <div class="col-sm-6">
-                                                                    <label>Pajak :</label>
-                                                                    <input class="form-control" type='text' name='Pajak' id='Pajak'>
+                                                                    <label>Jml Pembayaran :</label>
+                                                                    <input class="form-control" type='text' name='jmlpembayaran' id='jmlpembayaran'>
                                                                 </div>
                                                             </div>
                                                             <br>
                                                             <div class="row">
-                                                                <div class="col-sm-6">
-                                                                    <button type="submit" class="btn btn-primary" name='sbmt' id='sbmt'>Submit</button>
+                                                                <div class="col-sm-12 text-center">
+                                                                    <button type="button" class="btn btn-primary"  name='sbmt' id='sbmt'>Submit</button>
                                                                 </div>
                                                             </div>
                                                         </form>
@@ -167,40 +180,40 @@
                                         <table id="example" class="display table-responsive" cellspacing="0" width="100%">
                                             <thead>
                                                 <tr>
-                                                    <th>Kode Barang</th>
-                                                    <th>Nama Barang</th>
-                                                    <th>Qty</th>
-                                                    <th>Harga Satuan</th>
-                                                    <th>Disc %</th>
-                                                    <th>Pajak</th>
-                                                    <th>Jumlah Total</th>
+                                                    <th>No Faktur</th>
+                                                    <th>Tanggal Jatuh Tempo</th>
+                                                    <th>DP</th>
+                                                    <th>Kekurangan yang Harus di Bayar</th>
+                                                    <th>Disc. Pembayaran</th>
+                                                    <th>Jml Pembayaran</th>
+                                                    <th>Lunasi?</th>
                                                 </tr>
                                             </thead>
                                             <tfoot>
                                                 <tr>
-                                                    <th>Kode Barang</th>
-                                                    <th>Nama Barang</th>
-                                                    <th>Qty</th>
-                                                    <th>Harga Satuan</th>
+                                                    <th>No Faktur</th>
+                                                    <th>Tanggal Jatuh Tempo</th>
+                                                    <th>DP</th>
+                                                    <th>Kekurangan yang Harus di Bayar</th>
                                                     <th>Disc %</th>
-                                                    <th>Pajak</th>
-                                                    <th>Jumlah Total</th>
+                                                    <th>Jml Pembayaran</th>
+                                                    <th>Lunasi?</th>
                                                 </tr>
                                             </tfoot>
                                             <tbody>
                                                 <tr>
-                                                    <td>TX20</td>
-                                                    <td>Packet III </td>
-                                                    <td>1</td>
-                                                    <td>700000</td>
-                                                    <td>25 %</td>
-                                                    <td>10 %</td>
-                                                    <td>694000</td>
+                                                    <td>12345</td>
+                                                    <td>30/10/2016</td>
+                                                    <td>100000</td>
+                                                    <td>50000</td>
+                                                    <td>25</td>
+                                                    <td></td>
+                                                    <td> <input class="form-control" type="checkbox"></td>
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <br>
-                                        <form action="transfer_result.php" method="post">
+                                        <br/><br/>
+                                        <form action="" method="post">
                                             <div class="row">
                                             <div class="col-sm-6"></div>
                                             <div class="col-sm-2">
@@ -241,7 +254,7 @@
                                                 <div class="col-sm-12">
                                                     <div class="text-right">
                                                         <!--<label>Kode Barang :</label>-->
-                                                        <button type="submit" class="btn btn-primary">Simpan dan Bayar Otomatis</button>
+                                                        <button type="submit" class="btn btn-primary">Simpan dan Bayar</button>
                                                         <button type="button" class="btn btn-primary">Batal </button>
                                                     </div>  
                                                 </div>
@@ -278,72 +291,49 @@
 
                         return a + b;
                     }, 0 );
-                } );                
+                } );
                 
                 var table = $('#example').DataTable();
-                var fieldSubTotal = $('#subtotal');
-                var fieldGrandTotal = $('#grandtotal');
-                var fieldDiscNom = $('#discnom');
-                var fieldDiscPerc = $('#discpercent');
-                
-                sumSubTotal();
-                
-                fieldGrandTotal.val(fieldSubTotal.val());
 
                 $('#example tbody').on('click', 'tr', function() {
                     var data = table.row(this).data();
-                    alert('You clicked on ' + data[0] + '\'s row');
+//                    alert('You clicked on ' + data[0] + '\'s row');
 //                    data[0] = 'Loremipsum';
+
+                    $('#nofaktur').val(data[0]);
+                    $('#jthtempo').val(data[1]);
+                    $('#dp').val(data[2]);
+                    $('#kekurangan').val(data[3]);
+                    $('#disc').val(data[4]);
+                    $('#jmlpembayaran').val(data[5]);
+                    
+                    $('#myModal').modal().show();
+
                 });
 
                 $('#addrow').on('submit', function() {
-                    console.log('enter');
                     // var val = this.name.val();
                     // alert('whoa ' + val);
 
-                    var kodeBarang = $('#kodeBarang').val();
-                    var namaBarang = $('#namaBarang').val();
-                    var Qty = $('#Qty').val();
-                    var hargaSatuan = $('#hargaSatuan').val();
-                    var Disc = $('#Disc').val();
-                    var Pajak = $('#Pajak').val();
-
-                    console.log(kodeBarang);
+                    var name = $('#name').val();
+                    var position = $('#position').val();
+                    var office = $('#office').val();
+                    var age = $('#age').val();
+                    var startdate = $('#startdate').val();
+                    var salary = $('#salary').val();
 
                     table.row.add([
-                        kodeBarang,
-                        namaBarang,
-                        Qty,
-                        hargaSatuan,
-                        Disc,
-                        Pajak,
-                        '12300'
+                        name,
+                        position,
+                        office,
+                        age,
+                        startdate,
+                        salary
                     ]).draw(false);
 
-                    $('#myModal').modal('toggle');
-                    
-                    sumSubTotal();
-                    
+
                     return false;
                 });
-                
-                $('#discpercent').on('keyup', function () {
-                    var dscprc = fieldDiscPerc.val();
-                    var subttl = fieldSubTotal.val();
-                    var rsl = dscprc / 100 * subttl;
-                    fieldDiscNom.val(rsl);
-                    
-                    fieldGrandTotal.val(subttl - rsl);
-                    
-                });
-                
-                function sumSubTotal() {
-                    var total = table.column(6).data().sum();
-                    fieldSubTotal.val(total);
-                    console.log('total',total);
-                }
-                
-                
 
                 // $('#sbmt').click();
 

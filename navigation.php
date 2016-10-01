@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="">SB Admin</a>
+        <a class="navbar-brand" href="">do_empower(UMKM);</a>
     </div>
     <!-- /.navbar-header -->
 
@@ -54,10 +54,10 @@
                     <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                 </li>
                 <li>
-                    <a href=""><i class="fa fa-table fa-fw"></i> Lorem Ipsum</a>
+                    <a href=""><i class="fa fa-table fa-fw"></i> Akun</a>
                 </li>
                 <li>
-                    <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Dolor sit Amet</a>
+                    <a href="forms.html"><i class="fa fa-wrench fa-fw"></i> Pengaturan</a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-shopping-cart fa-fw"></i> Pembelian<span class="fa arrow"></span></a>
@@ -66,13 +66,13 @@
                             <a href="">Permintaan</a>
                         </li>
                         <li>
-                            <a href="">PO</a>
+                            <a href="purchase_order.php">Pesanan Pembelian</a>
                         </li>
                         <li>
-                            <a href="">Penerimaan Barang</a>
+                            <a href="goods_receipt.php">Penerimaan Barang</a>
                         </li>
                         <li>
-                            <a href="">Retur</a>
+                            <a href="retur_pembelian.php">Retur ke Vendor</a>
                         </li>
                         <li>
                             <a href="#">Invoice <span class="fa arrow"></span></a>
@@ -87,13 +87,13 @@
                             <!-- /.nav-third-level -->
                         </li>
                         <li>
-                            <a href="#">Pembayaran <span class="fa arrow"></span></a>
+                            <a href="#">Pembayaran Tagihan<span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
                                 <li>
-                                    <a href="#">Pembayaran Via BRI</a>
+                                    <a href="pembayaran.php">Pembayaran Via BRI</a>
                                 </li>
                                 <li>
-                                    <a href="#">Pembayaran Non BRI</a>
+                                    <a href="pembayaran_non_bri.php">Pembayaran Non BRI</a>
                                 </li>
                             </ul>
                             <!-- /.nav-third-level -->
@@ -105,19 +105,19 @@
                     <a href="#"><i class="fa fa-money fa-fw"></i> Penjualan<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="">Penawaran</a>
+                            <a href="sales_quotation.php">Penawaran Penjualan</a>
                         </li>
                         <li>
-                            <a href="">SO</a>
+                            <a href="sales_order.php">Order Penjualan</a>
                         </li>
                         <li>
-                            <a href="">DO</a>
+                            <a href="delivery_order.php">Order Pengiriman</a>
                         </li>
                         <li>
-                            <a href="">Retur</a>
+                            <a href="">Retur dari Customer</a>
                         </li>
                         <li>
-                            <a href="">Invoice</a>
+                            <a href="">Invoice Penjualan</a>
                         </li>
                         <li>
                             <a href="">Penerimaan Pembayaran</a>
@@ -125,7 +125,7 @@
                     </ul>
                     <!-- /.nav-second-level -->
                 </li>
-                <li>
+<!--                <li>
                     <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
@@ -150,10 +150,10 @@
                                     <a href="#">Third Level Item</a>
                                 </li>
                             </ul>
-                            <!-- /.nav-third-level -->
+                             /.nav-third-level 
                         </li>
                     </ul>
-                    <!-- /.nav-second-level -->
+                     /.nav-second-level 
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
@@ -165,8 +165,8 @@
                             <a href="login.html">Login Page</a>
                         </li>
                     </ul>
-                    <!-- /.nav-second-level -->
-                </li>
+                     /.nav-second-level 
+                </li>-->
             </ul>
         </div>
         <!-- /.sidebar-collapse -->
