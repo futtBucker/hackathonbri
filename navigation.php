@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="">do_empower(UMKM);</a>
+        <a class="navbar-brand" href="index.php">do_empower(UMKM);</a>
     </div>
     <!-- /.navbar-header -->
 
@@ -81,7 +81,7 @@
                                     <a href="purchase_invoice.php">Invoice dengan Auto Payment via BRI</a>
                                 </li>
                                 <li>
-                                    <a href="#">Invoice tanpa Auto Payment</a>
+                                    <a href="invoice_nonbri.php">Invoice tanpa Auto Payment</a>
                                 </li>
                             </ul>
                             <!-- /.nav-third-level -->

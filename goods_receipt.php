@@ -48,9 +48,9 @@
                                                 <div class="col-lg-6">
                                                     <label> &nbsp </label>
                                                     <select id="vensel" name="vensel" class="selectpicker" data-live-search="true">
-                                                        <option data-tokens="ketchup mustard">...</option>
-                                                        <option data-tokens="mustard">....</option>
-                                                        <option data-tokens="frosting">....</option>
+                                                        <option data-tokens="Requisition">Requisition</option>
+                                                        <option data-tokens="Purchase Order">Purchase Order </option>
+                                                        <option data-tokens="Penerimaan Barang">Penerimaan Barang</option>
                                                     </select>
                                                 </div>
                                             </div>
